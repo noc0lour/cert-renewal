@@ -1,0 +1,13 @@
+version: '2'
+services:
+  cert-renew:
+    container_name: cert-renew
+    build:
+        context: .
+        dockerfile: Dockerfile
+    env_file:
+        - ./cf.env
+        - ./cert.env
+    volumes:
+      - ./data:/acme
+      - ./config:/work/config:ro

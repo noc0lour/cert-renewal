@@ -1,0 +1,34 @@
+########################################################
+# This is the main config file for dehydrated          #
+#                                                      #
+# This file is looked for in the following locations:  #
+# $SCRIPTDIR/config (next to this script)              #
+# /usr/local/etc/dehydrated/config                     #
+# /etc/dehydrated/config                               #
+# ${PWD}/config (in current working-directory)         #
+#                                                      #
+# Default values of this config are in comments        #
+########################################################
+
+#IP_VERSION=
+# Path to certificate authority (default: https://acme-v01.api.letsencrypt.org/directory)
+#CA="https://acme-v01.api.letsencrypt.org/directory"
+#CA_TERMS="https://acme-v01.api.letsencrypt.org/terms"
+#LICENSE=""
+CHALLENGETYPE="dns-01"
+BASEDIR=$CERT_BASE
+#DOMAINS_TXT="${BASEDIR}/domains.txt"
+#CERTDIR="${BASEDIR}/certs"
+#ACCOUNTDIR="${BASEDIR}/accounts"
+#KEYSIZE="4096"
+#OPENSSL_CNF=
+HOOK=$CERT_HOOK
+# Chain clean_challenge|deploy_challenge arguments together into one hook call per certificate (default: no)
+#HOOK_CHAIN="no"
+#RENEW_DAYS="30"
+#PRIVATE_KEY_RENEW="yes"
+#PRIVATE_KEY_ROLLOVER="no"
+#KEY_ALGO=rsa
+CONTACT_EMAIL=$CERT_MAIL
+#LOCKFILE="${BASEDIR}/lock"
+#OCSP_MUST_STAPLE="no"
